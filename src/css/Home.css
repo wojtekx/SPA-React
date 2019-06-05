@@ -1,0 +1,52 @@
+.home.post{
+    overflow: hidden;
+    padding-left: 100px;
+}
+.home img{
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    bottom: 0;
+    left: 21px;
+}
+.container.home {
+    max-width: 800px;
+}
+#modal{
+    color: red;
+    padding: 20px 10px;
+    box-shadow: 0 0 10px 0 #B71C1C;
+    width: 170px;
+    margin: 5px auto;
+    border-radius: 10px;
+}
+h4.center.blue-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex button{
+    margin-left:10px;
+}
+.center.desc{
+    text-align: left;
+    padding-left: 10px;
+    border-top: 1px dashed #800026;
+}
+a .card .card-content {
+    padding: 20px 0 0;
+}
+a .card-content.flow-text{
+    height: 100px;
+}
+
+a .card-content.flow-text  span{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px 10px 0;
+}
