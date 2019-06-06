@@ -6,7 +6,7 @@ const Todos = ({todos, deleteTodo}) => {
             return(
                 <div className="collection-item" key={todo.id}>
                     <span>{todo.content}</span>
-                    <button className="right pointer" onClick={() => {deleteTodo(todo.id)}}>Delete</button>
+                    <button className="right" onClick={() => {deleteTodo(todo.id)}}>Delete</button>
                 </div>
             )
         })  :   <p className="center" >You have no todo's left</p>

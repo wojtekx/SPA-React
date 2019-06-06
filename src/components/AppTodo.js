@@ -12,7 +12,7 @@ class AppTodo extends Component {
       },
       {
         id:2,
-        content:'zrobić obiad'
+        content:'wykosić trawę'
       }
     ]
   }
@@ -35,7 +35,7 @@ class AppTodo extends Component {
   render(){
     return (
       <div className="todo-app container">
-        <h1 className="center blue-text">Todo's</h1>
+        <h4 className="center">Todo's</h4>
         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo}/>
         <AddForm addTodo={this.addTodo}/>
       </div>

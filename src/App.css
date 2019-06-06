@@ -1,0 +1,5 @@
+@media(max-width:500px){
+    .nav-wrapper.red.darken-4 .brand-logo.left{
+        display: none;
+     }
+}
