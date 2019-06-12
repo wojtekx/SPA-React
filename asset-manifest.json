@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-spa/static/css/main.17045723.chunk.css",
-    "main.js": "/react-spa/static/js/main.b980c5f3.chunk.js",
-    "main.js.map": "/react-spa/static/js/main.b980c5f3.chunk.js.map",
-    "runtime~main.js": "/react-spa/static/js/runtime~main.97fb65bb.js",
-    "runtime~main.js.map": "/react-spa/static/js/runtime~main.97fb65bb.js.map",
-    "static/js/2.3aa3a272.chunk.js": "/react-spa/static/js/2.3aa3a272.chunk.js",
-    "static/js/2.3aa3a272.chunk.js.map": "/react-spa/static/js/2.3aa3a272.chunk.js.map",
-    "index.html": "/react-spa/index.html",
-    "precache-manifest.1122d51ec424e03f91bae0e5feee83bd.js": "/react-spa/precache-manifest.1122d51ec424e03f91bae0e5feee83bd.js",
-    "service-worker.js": "/react-spa/service-worker.js",
-    "static/css/main.17045723.chunk.css.map": "/react-spa/static/css/main.17045723.chunk.css.map"
+    "main.css": "/spa-react/static/css/main.ebc7b299.chunk.css",
+    "main.js": "/spa-react/static/js/main.754c40c0.chunk.js",
+    "main.js.map": "/spa-react/static/js/main.754c40c0.chunk.js.map",
+    "runtime~main.js": "/spa-react/static/js/runtime~main.afad200a.js",
+    "runtime~main.js.map": "/spa-react/static/js/runtime~main.afad200a.js.map",
+    "static/js/2.4bc09822.chunk.js": "/spa-react/static/js/2.4bc09822.chunk.js",
+    "static/js/2.4bc09822.chunk.js.map": "/spa-react/static/js/2.4bc09822.chunk.js.map",
+    "index.html": "/spa-react/index.html",
+    "precache-manifest.92a7abbfe9fbe24e75b5b9d2f0489784.js": "/spa-react/precache-manifest.92a7abbfe9fbe24e75b5b9d2f0489784.js",
+    "service-worker.js": "/spa-react/service-worker.js",
+    "static/css/main.ebc7b299.chunk.css.map": "/spa-react/static/css/main.ebc7b299.chunk.css.map"
   }
 }
