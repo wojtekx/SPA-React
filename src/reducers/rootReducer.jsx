@@ -1,5 +1,6 @@
-let initState = {
-    posts: [],
+
+let initState ={
+    posts:[]
 }
 
 const rootReducer = (state = initState, action) => {
@@ -15,21 +16,31 @@ const rootReducer = (state = initState, action) => {
            posts: newPosts
        }
    }
-   if ( action.type === 'ADD_POST'){
-
-    const y = [action.content.list[0], action.content.city]
-    console.log(y);
-    
-        let newPosts = [ 
+   if ( action.type === 'ADD_POST' && state.posts !== null ){
+     
+        let newPosts = [
             ...state.posts,
             action.content
         ]
-        localStorage.setItem('state',  JSON.stringify(newPosts))
+       const x = state.posts.map(e=> e.city.name == action.content.city.name ? true : false )
+        if(x.includes(true)){
+            alert('Takie miasto jest już na liście')
+        }
+        else{
+            localStorage.setItem('state',  JSON.stringify(newPosts))
         
         return {
             ...state,
             posts:  newPosts
-        }     
+        } 
+        }
+            
+    } else if (action.type === 'ADD_POST'){
+        localStorage.setItem('state',  JSON.stringify([action.content]))
+        
+        return {
+            posts:  action.content
+        } 
     }
     const x = JSON.parse(localStorage.getItem('state'))
     return {

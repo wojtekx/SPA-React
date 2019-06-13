@@ -17,10 +17,11 @@ class Post extends Component {
                     <img className="weather-icon" src={`http://openweathermap.org/img/w/${icon}.png`} alt="ikona"/>
                 </h4>
                <div className="center desc">
+                    <p>City: {this.props.post.city.country}</p>
                     <p>Temp: {Math.round(this.props.post.list[0].main.temp)}°C</p>
-                    <p>humidity: {Math.round(this.props.post.list[0].main.humidity)} %</p>
-                    <p>pressure: {Math.round(this.props.post.list[0].main.pressure)} Hpa</p>
-                    <p>wind: {Math.round(this.props.post.list[0].wind.speed)} m/s</p>
+                    <p>Humidity: {Math.round(this.props.post.list[0].main.humidity)} %</p>
+                    <p>Pressure: {Math.round(this.props.post.list[0].main.pressure)} Hpa</p>
+                    <p>Wind: {Math.round(this.props.post.list[0].wind.speed)} m/s</p>
                </div>
                 <div className="center flex">
                     <button className="btn blue" onClick={this.customReturn}>

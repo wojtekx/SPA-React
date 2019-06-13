@@ -23,8 +23,9 @@ class Home extends Component {
         content:'',
         api: 'a5fbabc049476ee882170752effe1fbc'
     }
-    addModal = () => {
-        document.querySelector('form span').innerHTML="<div id='modal'>Nie ma takiego miasta</div>"
+    addModal = (text) => {
+        document.querySelector('form span').innerHTML=`<div id='modal'>${text}</div>`;
+        setTimeout(()=>{ document.querySelector('form span').innerHTML=""},2500)
     }
     handleChange = (e) => {
         this.setState({content:e.target.value})
@@ -34,7 +35,7 @@ class Home extends Component {
         document.querySelector('form span').innerHTML="";
         
         axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${this.state.content}&units=metric&appid=${this.state.api}`)
-        .then ( res=> this.props.addPost(res.data) , error => this.addModal())
+        .then ( res=> this.props.addPost(res.data) , error => this.addModal('Nie ma takiego miasta'))
         this.setState({content:''})
         this.changeColor()
     }
@@ -43,8 +44,8 @@ class Home extends Component {
     }
        render(){
            const { posts } = this.props;
-          
-           const postList = posts.length ? (
+            
+           const postList = posts ? (
                posts.map(post => {
                 const icon = post.list[0].weather[0].icon
                    return (
@@ -75,7 +76,7 @@ class Home extends Component {
                     <label htmlFor="input">Wpisz nazwę miasta</label>
                     <span></span>
                     <div className="flex">
-                        <input type="text" name="input" value={this.state.content} onChange={this.handleChange}/>
+                        <input type="text" name="input" value={this.state.content} onChange={this.handleChange} required autoComplete="off"/>
                         <button className="btn green">Dodaj</button>
                     </div>
                 </form>
@@ -92,7 +93,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch) => {
     return{
         addPost: id => { dispatch( addPost(id) ) },
-        deletePost: id => { dispatch( deletePost(id) ) }
+        deletePost: id => { dispatch( deletePost(id) ) },
+        
     }
 }
 
